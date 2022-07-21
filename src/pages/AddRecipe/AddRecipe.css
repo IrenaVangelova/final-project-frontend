@@ -1,0 +1,156 @@
+.recipe-form {
+    display: flex;
+    margin: 0;
+    width: 100%;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.img-info {
+    display: inline-block;
+    font-family: Roboto Slab;
+    width: 20%;
+}
+
+.recipe-info {
+    font-family: Roboto Slab;
+    width: 35%;
+}
+
+.recipe-info>h4 {
+    font-family: Roboto Slab;
+    font-weight: bolder;
+    margin-bottom: 0.7rem;
+    color: #F0972A;
+}
+
+.recipe-info>textarea {
+    padding: 5px;
+    height: 18rem;
+    width: 22rem;
+    border-radius: 5px;
+    font-family: Roboto Slab;
+    font-weight: bold;
+    border: 1px solid #A5A5A5;
+    background: #F0EFEA;
+    color: var(--midgrey);
+    text-align: left;
+}
+
+.img-info>h4 {
+    font-family: Roboto Slab;
+    font-weight: bolder;
+    margin-bottom: 0.7rem;
+    color: #F0972A;
+}
+
+.img-info > img {
+    width: 90%;
+}
+
+.img-info > label {
+    border: 1px solid #A5A5A5;
+    display: block;
+    width: 180px;
+    font-family: Roboto Slab;
+    height: 7%;
+    color: grey;
+    text-align: center;
+    padding-top: 4px;
+    border-radius: 5px;
+}
+
+.form-names {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 100%;
+    margin-top: 1.33rem;
+}
+
+.form-names>label {
+    font-family: Roboto Slab;
+    font-weight: bolder;
+    margin-bottom: 0.7rem;
+    color: #F0972A;
+}
+
+.form-names>input {
+    padding: 5px;
+    height: 1.7rem;
+    width: 90%;
+    border-radius: 5px;
+    font-family: Roboto Slab;
+    font-weight: bold;
+    border: 1px solid #A5A5A5;
+    background: #F0EFEA;
+    color: grey;
+}
+
+.form-names>select {
+    padding: 5px;
+    height: 2.5rem;
+    width: 90%;
+    border-radius: 5px;
+    font-family: Roboto Slab;
+    font-weight: bold;
+    border: 1px solid #A5A5A5;
+    background: #F0EFEA;
+    color: lightgrey;
+}
+
+.form-info>button {
+    font: normal normal 700 16px/45px Roboto;
+    width: 22%;
+    height: 2.7rem;
+    margin-top: 2rem;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 0;
+    text-align: center;
+    border-radius: 6px;
+    background: #96BB36 0% 0% no-repeat padding-box;
+    font-size: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.form-info {
+    width: 45%;
+}
+
+.form-inside {
+    display: flex;
+    flex-direction: row;
+}
+
+.form-inside>.form-names>input {
+    width: 8rem;
+}
+
+.form-names-shortDesp {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.7rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.form-names-shortDesp>label {
+    font-family: Roboto Slab;
+    font-weight: bolder;
+    margin-bottom: 0.7rem;
+    color: #F0972A;
+}
+
+.form-names-shortDesp>textarea {
+    display: inline-block;
+    text-align: left;
+    height: 5rem;
+    width: 91%;
+    border-radius: 5px;
+    font-family: Roboto Slab;
+    font-weight: bold;
+    border: 1px solid #A5A5A5;
+    background: #F0EFEA;
+    color: #626262;
+}

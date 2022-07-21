@@ -1,0 +1,43 @@
+:root {
+  /* Colors: */
+  --lightgrey: #d8d8d8;
+  --white: #ffffff;
+  --softwhite: #f8f7f2;
+  --orange: #f0972a;
+  --midgrey: #a5a5a5;
+  --darkgrey: #626262;
+  --green: #96bb36;
+
+  /* Font/text values */
+  --unnamed-font-family-roboto: Roboto;
+  --unnamed-font-family-roboto-slab: Roboto Slab;
+  --unnamed-font-style-normal: normal;
+  --unnamed-font-weight-bold: bold;
+  --unnamed-font-weight-normal: normal;
+  --unnamed-font-size-14: 14px;
+  --unnamed-font-size-18: 18px;
+  --unnamed-font-size-20: 20px;
+  --unnamed-font-size-36: 36px;
+  --unnamed-character-spacing-0: 0px;
+  --unnamed-line-spacing-19: 19px;
+  --unnamed-line-spacing-24: 24px;
+  --unnamed-line-spacing-26: 26px;
+  --unnamed-line-spacing-48: 48px;
+  --unnamed-text-transform-uppercase: uppercase;
+}
+
+.App {
+  text-align: center;
+  margin: 0px;
+  top: 0px;
+  left: 0px;
+  background: var(--softwhite) 0% 0% no-repeat padding-box;
+  background: #F8F7F2 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.container {
+  margin-left: 336px;
+  margin-right: 337px;
+  min-height: 100vh;
+}
