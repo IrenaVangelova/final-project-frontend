@@ -23,7 +23,7 @@ const Brunch = (props) => {
   const get = (page) => {
     if (page === null || page === undefined) page = 0;
     axios
-      .get("https://irenas-final-project-frontend.herokuapp.com/recipes/category/brunch/" + page)
+      .get("http://localhost:5000/recipes/category/brunch/" + page)
       .then((res) => {
         setRecipes(res.data.recipes);
         console.log(res.data.recipes);
@@ -79,7 +79,7 @@ const Brunch = (props) => {
       let userId = currentUser.userId;
 
       axios
-        .post("https://irenas-final-project-frontend.herokuapp.com/recipes/like", { recipeId, userId })
+        .post("http://localhost:5000/recipes/like", { recipeId, userId })
         .then((response) => {})
         .catch((error) => {
           console.log(error);
@@ -113,7 +113,7 @@ const Brunch = (props) => {
               key={item._id}
               id={item._id}
               imgUrl={
-                "https://irenas-final-project-frontend.herokuapp.com/" + item.image
+                "http://localhost:5000/" + item.image
               }
               title={item.title}
               category={item.category}

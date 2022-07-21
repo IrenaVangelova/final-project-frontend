@@ -13,7 +13,7 @@ const Login = () => {
     let password = event.target[1].value;
 
     axios
-      .post("https://irenas-final-project-frontend.herokuapp.com/users/login", { email, password })
+      .post("http://localhost:5000/users/login", { email, password })
       .then((response) => {
         let data = {
           token: response.data.token,

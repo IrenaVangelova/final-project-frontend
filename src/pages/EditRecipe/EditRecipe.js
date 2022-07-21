@@ -21,7 +21,7 @@ const EditRecipe = () => {
       Authorization: `Bearer ${currentUser.token}`,
     };
     axios
-      .get(`https://irenas-final-project-frontend.herokuapp.com/recipes/${recipe}`)
+      .get(`http://localhost:5000/recipes/${recipe}`)
       .then((response) => {
         console.log(response.data.recipes);
         setRecipeData(response.data.recipes);
@@ -63,7 +63,7 @@ const EditRecipe = () => {
     let id = currentUser.userId;
 
     axios
-      .post(`https://irenas-final-project-frontend.herokuapp.com/recipes/${recipe}/update`, formData)
+      .post(`http://localhost:5000/recipes/${recipe}/update`, formData)
       .then((response) => {
         alert("Recipe updated");
         navigate("/myRecipes");
@@ -78,7 +78,7 @@ const EditRecipe = () => {
       <form onSubmit={UpdateRecipeHandler} className="recipe-form">
         <div className="img-info">
           <h4 htmlFor="recipeImg">Recipe Image</h4>
-          <img src={image && previewImage ? 'https://irenas-final-project-frontend.herokuapp.com/' + image : (previewImage==false ? URL.createObjectURL(image) : recipeImg)} alt="recipeImg" />
+          <img src={image && previewImage ? 'http://localhost:5000/' + image : (previewImage==false ? URL.createObjectURL(image) : recipeImg)} alt="recipeImg" />
             <input id="file" type="file" style = {{visibility: "hidden"}} accept="image/*" onChange={(e) => { setImage(e.target.files[0]); setPreviewImage(false); setHasChanges(true)}} />
             <label for="file">UPLOAD IMAGE</label>
         </div>

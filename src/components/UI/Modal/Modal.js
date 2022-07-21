@@ -15,7 +15,7 @@ const Modal = (props) => {
 
   const get = () => {
     axios
-      .get("https://irenas-final-project-frontend.herokuapp.com/recipes/" + data)
+      .get("http://localhost:5000/recipes/" + data)
       .then((res) => {
         setItem(res.data.recipes);
       })
@@ -42,7 +42,7 @@ const Modal = (props) => {
             <div className="modal-left">
               <img
                 className="modal-img"
-                src={"https://irenas-final-project-frontend.herokuapp.com/" + item.image}
+                src={"http://localhost:5000/" + item.image}
                 alt="image"
               />
               <div className="category-info">

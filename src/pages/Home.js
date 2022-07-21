@@ -21,7 +21,7 @@ const Home = () => {
 
   const getLatest = () => {
     axios
-      .get("https://irenas-final-project-frontend.herokuapp.com/recipes/latest")
+      .get("http://localhost:5000/recipes/latest")
       .then((res) => {
         setLatest(res.data.recipes);
       })
@@ -32,7 +32,7 @@ const Home = () => {
 
   const getPopular = () => {
     axios
-      .get("https://irenas-final-project-frontend.herokuapp.com/recipes/popular")
+      .get("http://localhost:5000/recipes/popular")
       .then((res) => {
         setPopular(res.data.recipes);
       })
@@ -68,7 +68,7 @@ const Home = () => {
       let userId = currentUser.userId;
 
       axios
-        .post("https://irenas-final-project-frontend.herokuapp.com/recipes/like", { recipeId, userId })
+        .post("http://localhost:5000/recipes/like", { recipeId, userId })
         .then((response) => { })
         .catch((error) => {
           console.log(error);
@@ -108,7 +108,7 @@ const Home = () => {
               key={item._id}
               id={item._id}
               imgUrl={
-                "https://irenas-final-project-frontend.herokuapp.com/" + item.image
+                "http://localhost:5000/" + item.image
               }
               title={item.title}
               category={item.category}
@@ -138,7 +138,7 @@ const Home = () => {
               key={item._id}
               id={item._id}
               imgUrl={
-                "https://irenas-final-project-frontend.herokuapp.com/" + item.image
+                "http://localhost:5000/" + item.image
               }
               title={item.title}
               category={item.category}

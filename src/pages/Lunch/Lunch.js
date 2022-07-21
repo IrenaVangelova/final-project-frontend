@@ -23,7 +23,7 @@ const Lunch = (props) => {
   const get = (page) => {
     if (page === null || page === undefined) page = 0;
     axios
-      .get("https://irenas-final-project-frontend.herokuapp.com/recipes/category/lunch/" + page)
+      .get("http://localhost:5000/recipes/category/lunch/" + page)
       .then((res) => {
         console.log(res.data);
         setRecipes(res.data.recipes);
@@ -75,7 +75,7 @@ const Lunch = (props) => {
       let userId = currentUser.userId;
 
       axios
-        .post("https://irenas-final-project-frontend.herokuapp.com/recipes/like", { recipeId, userId })
+        .post("http://localhost:5000/recipes/like", { recipeId, userId })
         .then((response) => {})
         .catch((error) => {
           console.log(error);
@@ -107,7 +107,7 @@ const Lunch = (props) => {
             <Card
               key={item._id}
               id={item._id}
-              imgUrl={"https://irenas-final-project-frontend.herokuapp.com/" + item.image}
+              imgUrl={"http://localhost:5000/" + item.image}
               title={item.title}
               category={item.category}
               shortDescription={item.shortDescription}
