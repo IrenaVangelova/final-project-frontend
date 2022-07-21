@@ -36,7 +36,7 @@ const CreateUser = () => {
       alert("passwords do not match");
     } else {
       axios
-        .post("http://localhost:5000/users/register", {
+        .post("https://irenas-final-project-frontend.herokuapp.com/users/register", {
           firstName,
           lastName,
           birthdate,

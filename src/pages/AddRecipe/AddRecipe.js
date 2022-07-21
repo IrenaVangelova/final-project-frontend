@@ -36,7 +36,7 @@ const AddRecipe = () => {
     formData.append('image', image);
 
     axios
-      .post("http://localhost:5000/recipes/create", formData)
+      .post("https://irenas-final-project-frontend.herokuapp.com/recipes/create", formData)
       .then((response) => {
         console.log(response);
         alert("Recipe added");

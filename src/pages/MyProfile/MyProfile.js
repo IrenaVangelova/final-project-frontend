@@ -20,7 +20,7 @@ const MyProfile = () => {
       Authorization: `Bearer ${currentUser.token}`,
     };
     axios
-      .get(`http://localhost:5000/users/${currentUser.userId}`)
+      .get(`https://irenas-final-project-frontend.herokuapp.com/users/${currentUser.userId}`)
       .then((response) => {
         setProfile(response.data.users);
         setImage(response.data.users.image);
@@ -60,7 +60,7 @@ const MyProfile = () => {
     let id = currentUser.userId;
 
     axios
-      .post(`http://localhost:5000/users/${id}/update`, formData)
+      .post(`https://irenas-final-project-frontend.herokuapp.com/users/${id}/update`, formData)
       .then((response) => {
         alert("Profile successfully updated"); 
         navigation("/");
@@ -73,7 +73,7 @@ const MyProfile = () => {
       <SectionTitle title={"My Profile"} />
       <form className="profile-form" onSubmit={updateProfileHandler}>
         <div className="profile-textbox">
-          <img src={image && previewImage ? 'http://localhost:5000/' + image : (previewImage==false ? URL.createObjectURL(image) : avatar)} alt="Avatar" />
+          <img src={image && previewImage ? 'https://irenas-final-project-frontend.herokuapp.com/' + image : (previewImage==false ? URL.createObjectURL(image) : avatar)} alt="Avatar" />
             <input id="file" type="file" style = {{visibility: "hidden"}} accept="image/*" onChange={(e) => { setImage(e.target.files[0]); setPreviewImage(false); setHasChanges(true)}} />
             <label for="file">CHANGE AVATAR</label>
         </div>

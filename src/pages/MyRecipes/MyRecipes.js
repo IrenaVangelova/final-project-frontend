@@ -19,7 +19,7 @@ const MyRecipes = () => {
 
   const get = () => {
     axios
-      .post("http://localhost:5000/recipes/myRecipes", {
+      .post("https://irenas-final-project-frontend.herokuapp.com/recipes/myRecipes", {
         user: currentUser.userId,
       })
       .then((res) => {
@@ -38,7 +38,7 @@ const MyRecipes = () => {
   const deleteHandler = (event) => {
     let id = event.currentTarget.id;
     axios
-      .post(`http://localhost:5000/recipes/${id}/remove`)
+      .post(`https://irenas-final-project-frontend.herokuapp.com/recipes/${id}/remove`)
       .then((res) => {
         console.log(res);
         window.location.reload();
